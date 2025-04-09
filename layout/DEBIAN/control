@@ -1,0 +1,9 @@
+Package: com.nathan.mediacolor
+Name: MediaColor
+Version: 1.0.4
+Architecture: iphoneos-arm
+Description: Tweak that changes the background color of Now Playing widget of the lock screen to match the album art! (iPhone only for now)
+Maintainer: Nathan Senter
+Author: Nathan Senter
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000)
