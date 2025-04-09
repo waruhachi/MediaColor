@@ -3,9 +3,6 @@
 @interface MRUNowPlayingView : UIView
 @end
 
-/*@interface MRUNowPlayingViewController : UIViewController
-@end*/
-
 @interface MRUArtworkView : UIControl
 @property (nonatomic,retain) UIImageView * artworkImageView;
 @end
@@ -14,9 +11,13 @@ UIView *artworkBackground;
 
 %hook MRUNowPlayingView
 
-- (void)didMoveToSuperview {
+- (void)didMoveToWindow {
     %orig;
-    artworkBackground = self;
+    if (self.window) {
+        artworkBackground = self;
+    } else {
+        artworkBackground = nil;
+    }
 }
 
 %end
@@ -31,12 +32,3 @@ UIView *artworkBackground;
     }
 }
 %end
-
-/*%hook MRUNowPlayingViewController
--(void)artworkView:(id)artworkView didChangeArtworkImage:(id)artworkImage {
-    %orig;
-    [UIView animateWithDuration:0.3 animations:^{
-        artworkBackground.backgroundColor = [artworkImage velvetAverageColor];
-    }];
-}
-%end*/
