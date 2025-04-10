@@ -7,7 +7,7 @@ include $(THEOS)/makefiles/common.mk
 TWEAK_NAME = MediaColor
 
 MediaColor_FILES = Tweak.x ColorSupport.m
-MediaColor_CFLAGS = -fobjc-arc -w
-MediaColor_FRAMEWORKS = CoreGraphics
+MediaColor_CFLAGS = -fobjc-arc
+# MediaColor_FRAMEWORKS = MediaPlayer
 # MediaColor_PRIVATE_FRAMEWORKS = MediaRemote MediaControls
 include $(THEOS_MAKE_PATH)/tweak.mk

@@ -1,13 +1,4 @@
-#import "ColorSupport.h"
-
-@interface MRUNowPlayingView : UIView
-@end
-
-@interface MRUArtworkView : UIControl
-@property (nonatomic,retain) UIImageView * artworkImageView;
-@end
-
-UIView *artworkBackground;
+#import "Tweak.h"
 
 %hook MRUNowPlayingView
 
